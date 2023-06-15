@@ -1,0 +1,64 @@
+.select {
+    display: flex;
+    flex-direction: column;
+    width: 246px;
+}
+
+.select__emty {
+    min-height: 35px;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.select__emty:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 14px;
+    background: url("../../img/arrow-list.svg");
+    right: 10px;
+    top: 30%;
+    transition: 0.5s;
+    transform: rotate(180deg);
+}
+
+ .select__emty-active::after {
+    transform: rotate(0deg);
+}
+
+.select__items {
+    display: none;
+    width: 246px;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+
+.select__items-active {
+    display: flex;
+}
+
+.select__item {
+    font-size: 18px;
+    padding: 7px 8px 7px 8px;
+    cursor: pointer;
+}
+
+.select__item:hover {
+    background: #dedede;
+}
+
+.select__item:first-child {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.select__item:last-child {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
